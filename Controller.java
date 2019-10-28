@@ -1,4 +1,4 @@
-package sample;
+package WordAnalyzerPackage;
 
 public class Controller {
 }
