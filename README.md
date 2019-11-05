@@ -4,6 +4,9 @@ This piece of software will be updated as the semester goes on.
 
 Changelog - 
 
+~ Text Analyzer 1.3 ~
+JavaDoc has been implemented!
+
 ~ Text Analyzer 1.2 ~
 We have JUnit testing now along with a whole new level of 
 stabillity brought about by its implementation! Crashes are
