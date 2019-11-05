@@ -19,12 +19,31 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-
+/**
+ * Creates a WordAnalyzer Object.
+ *
+ * The object will read in a txt file
+ * and output a result string with the
+ * top 20 most frequently used words.
+ *
+ * @author Manuel Armenta Batt
+ *
+ */
 public class WordAnalyzer extends Application{
 
 
     Button fileButton;
 
+    /**
+     * start will take a JavaFX Primary stage
+     * and will initialize the first screen of
+     * the GUI.
+     * A file will be asked to uploaded through
+     * JavaFX Filechooser for processing.
+     *
+     * @param primaryStage
+     * @throws Exception
+     */
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("WordAnalyzerPackage.fxml"));
@@ -105,11 +124,26 @@ public class WordAnalyzer extends Application{
     }
 
 
+    /**
+     * Kickstarts the start method.
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         launch(args);
     }
 
 
+    /**
+     * analyzer is responsible for the heavy
+     * lifting in this project. It accepts a
+     * File as a parameter and returns a String
+     * of Results detailing the 20 most commonly
+     * used words in a text file.
+     *
+     * @param file
+     * @throws FileNotFoundException
+     */
     public static String analyzer(File file) throws FileNotFoundException {
         Map<String, Integer> wordMap = new HashMap<>();
         Scanner scan;
